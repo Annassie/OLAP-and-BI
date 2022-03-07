@@ -7,10 +7,10 @@ Steps to install SQL Server via Docker:
 1. Install Docker (memory allocation 4 GB)
 
 2. Pull the SQL Server image in Terminal
-  <p>docker pull mcr.microsoft.com/mssql/server:2019-latest</p>
+  <p>docker pull mcr.microsoft.com/mssql/server:2019-latest<br>
   
   Latest version:
-  https://hub.docker.com/_/microsoft-mssql-server
+  https://hub.docker.com/_/microsoft-mssql-server</p>
 
 3. Launch the SQL Server Image 
   docker run -d --name Homer -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=myPassw0rd' -p 1433:1433 mcr.microsoft.com/mssql/server:2019-latest
