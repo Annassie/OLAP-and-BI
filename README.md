@@ -1,6 +1,9 @@
 # OLAP-and-BI
 
-For using SQL on Mac, was used Docker, where SQL Server was installed
+For using SQL on Mac, was used Docker, where SQL Server was installed.
+
+Instructions to install SQL Server on Mac:
+https://www.quackit.com/sql_server/mac/install_sql_server_on_a_mac.cfm
 
 Steps to install SQL Server via Docker:
 
