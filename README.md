@@ -20,3 +20,5 @@ Steps to install SQL Server via Docker:
    
 To access SQL Server was used DBeaver management tool.
 
+And as a database was used AdventureWorks2019.bak
+
