@@ -4,7 +4,7 @@ For using SQL on Mac, was used Docker, where SQL Server was installed
 
 Steps to install SQL Server via Docker:
 
-1. Install Docker (memory allocation 4 GB)
+**1. Install Docker (memory allocation 4 GB)**
 
 2. Pull the SQL Server image in Terminal
   <p>docker pull mcr.microsoft.com/mssql/server:2019-latest<br>
