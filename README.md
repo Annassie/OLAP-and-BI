@@ -41,8 +41,7 @@ SELECT
   ActualCost
 
 FROM [Production].[WorkOrderRouting]
-<style>ORDER BY{color:Blue;}</style>  
-+  ActualStartDate, ProductID
+ORDER BY ActualStartDate, ProductID
 
 
 #### Task 2
