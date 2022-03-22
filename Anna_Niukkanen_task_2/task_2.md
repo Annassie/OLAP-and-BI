@@ -1,22 +1,24 @@
-Creating DB based on AdventureWorks2019-db, using Star Schema.
+# Task 2
 
-**1. First creating Stamp-db, and tables into created db.
+#### Creating DB based on AdventureWorks2019-db, using Star Schema.
 
-Tables:
-[dbo].[FctSales]
-[dbo].[DmnDate]
-[dbo].[DmnOrder]
-[dbo].[DmnProduct]
+1. First creating Stamp-db, and tables into created db.
+
+Tables: <br>
+[dbo].[FctSales] <br>
+[dbo].[DmnDate] <br>
+[dbo].[DmnOrder] <br>
+[dbo].[DmnProduct] <br>
 
 CREATE DATABASE Stamp;
 
-CREATE TABLE [dbo].[FctSales] (
-    SalesOrderID int IDENTITY(1,1) NOT NULL PRIMARY KEY,
-    ProductID int NOT NULL,
-    OrderQty smallint NOT NULL,
-    UnitPrice money NOT NULL,
-    ModifiedDate DATE NULL
-);
+CREATE TABLE [dbo].[FctSales] ( <br>
+    SalesOrderID int IDENTITY(1,1) NOT NULL PRIMARY KEY, <br>
+    ProductID int NOT NULL, <br>
+    OrderQty smallint NOT NULL, <br>
+    UnitPrice money NOT NULL, <br>
+    ModifiedDate DATE NULL <br>
+); <br>
 
 CREATE TABLE [dbo].[DmnDate] (
     ProductID int IDENTITY(1,1) NOT NULL PRIMARY KEY,
@@ -28,15 +30,15 @@ CREATE TABLE [dbo].[DmnDate] (
     -- ON UPDATE NO ACTION 
 );
 
-## DROP TABLE [dbo].[DmnOrder]
+(DROP TABLE [dbo].[DmnOrder])
 
-CREATE TABLE [dbo].[DmnOrder](
-    SalesOrderID int IDENTITY(1,1) NOT NULL PRIMARY KEY,
-    SalesOrderNumber nvarchar(255) NOT NULL,
-    AccountNumber nvarchar(255) NOT NULL,
-    CreditCardID int,
-    OrderDate datetime NOT NULL,
-    ModifiedDate datetime NULL
+CREATE TABLE [dbo].[DmnOrder]( <br>
+    SalesOrderID int IDENTITY(1,1) NOT NULL PRIMARY KEY, <br>
+    SalesOrderNumber nvarchar(255) NOT NULL, <br>
+    AccountNumber nvarchar(255) NOT NULL, <br>
+    CreditCardID int, <br>
+    OrderDate datetime NOT NULL, <br>
+    ModifiedDate datetime NULL <br>
   
     -- CONSTRAINT FK_FctTable_DmnOrder FOREIGN KEY (SalesOrderID)     
     -- REFERENCES [dbo].[FctSales] (SalesOrderID)     
@@ -45,13 +47,13 @@ CREATE TABLE [dbo].[DmnOrder](
 );
 
 
-CREATE TABLE [dbo].[DmnProduct] (
-    ProductID int IDENTITY(1,1) NOT NULL PRIMARY KEY,
-    Name nvarchar(50) NOT NULL,
-    ProductNumber nvarchar(25) NOT NULL,
-    ListPrice money NOT NULL,
-    Size nvarchar(5),
-    ModifiedDate datetime
+CREATE TABLE [dbo].[DmnProduct] ( <br>
+    ProductID int IDENTITY(1,1) NOT NULL PRIMARY KEY, <br>
+    Name nvarchar(50) NOT NULL, <br>
+    ProductNumber nvarchar(25) NOT NULL, <br>
+    ListPrice money NOT NULL, <br>
+    Size nvarchar(5), <br>
+    ModifiedDate datetime <br>
 
     -- CONSTRAINT FK_FctTable_DmnProduct FOREIGN KEY (ProductID)     
     -- REFERENCES [dbo].[FctSales] (ProductID)     
