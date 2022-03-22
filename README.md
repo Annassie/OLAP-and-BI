@@ -25,3 +25,24 @@ To access SQL Server was used DBeaver management tool.
 
 And as a database was used AdventureWorks2019.bak
 
+
+## Tasks
+
+#### Task 1
+
+Create table in Microsoft Exel, using data from AdventureWorks2019-database. 
+
+Can be used:
+
+SELECT
+  WorkOrderID,
+  LocationID, 
+  ProductID, ActualStartDate,
+  ActualCost
+
+FROM [Production].[WorkOrderRouting]
+<style>ORDER BY{color:Blue;}</style>  
++  ActualStartDate, ProductID
+
+
+#### Task 2
