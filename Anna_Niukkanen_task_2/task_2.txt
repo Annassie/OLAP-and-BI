@@ -1,10 +1,10 @@
-# Task 2
+Task 2
 
-#### Creating DB based on AdventureWorks2019-db, using Star Schema.
+Creating DB based on AdventureWorks2019-db, using Star Schema.
 
 1. First creating Stamp-db, and tables into created db.
 
-Tables: <br>
+Tables: 
 [dbo].[FctSales] 
 [dbo].[DmnDate] 
 [dbo].[DmnOrder]
@@ -12,12 +12,12 @@ Tables: <br>
 
 CREATE DATABASE Stamp;
 
-CREATE TABLE [dbo].[FctSales] ( <br>
-    SalesOrderID int IDENTITY(1,1) NOT NULL PRIMARY KEY, <br>
-    ProductID int NOT NULL, <br>
-    OrderQty smallint NOT NULL, <br>
-    UnitPrice money NOT NULL, <br>
-    ModifiedDate DATE NULL <br>
+CREATE TABLE [dbo].[FctSales] (
+    SalesOrderID int IDENTITY(1,1) NOT NULL PRIMARY KEY, 
+    ProductID int NOT NULL, 
+    OrderQty smallint NOT NULL, 
+    UnitPrice money NOT NULL, 
+    ModifiedDate DATE NULL 
 ); <br>
 
 CREATE TABLE [dbo].[DmnDate] (
@@ -32,13 +32,13 @@ CREATE TABLE [dbo].[DmnDate] (
 
 (DROP TABLE [dbo].[DmnOrder])
 
-CREATE TABLE [dbo].[DmnOrder]( <br>
-    SalesOrderID int IDENTITY(1,1) NOT NULL PRIMARY KEY, <br>
-    SalesOrderNumber nvarchar(255) NOT NULL, <br>
-    AccountNumber nvarchar(255) NOT NULL, <br>
-    CreditCardID int, <br>
-    OrderDate datetime NOT NULL, <br>
-    ModifiedDate datetime NULL <br>
+CREATE TABLE [dbo].[DmnOrder]( 
+    SalesOrderID int IDENTITY(1,1) NOT NULL PRIMARY KEY, 
+    SalesOrderNumber nvarchar(255) NOT NULL, 
+    AccountNumber nvarchar(255) NOT NULL, 
+    CreditCardID int, 
+    OrderDate datetime NOT NULL, 
+    ModifiedDate datetime NULL 
   
     -- CONSTRAINT FK_FctTable_DmnOrder FOREIGN KEY (SalesOrderID)     
     -- REFERENCES [dbo].[FctSales] (SalesOrderID)     
@@ -48,9 +48,9 @@ CREATE TABLE [dbo].[DmnOrder]( <br>
 
 
 CREATE TABLE [dbo].[DmnProduct] ( <br>
-    ProductID int IDENTITY(1,1) NOT NULL PRIMARY KEY, <br>
-    Name nvarchar(50) NOT NULL, <br>
-    ProductNumber nvarchar(25) NOT NULL, <br>
+    ProductID int IDENTITY(1,1) NOT NULL PRIMARY KEY, 
+    Name nvarchar(50) NOT NULL, 
+    ProductNumber nvarchar(25) NOT NULL, 
     ListPrice money NOT NULL, <br>
     Size nvarchar(5), <br>
     ModifiedDate datetime <br>
@@ -61,9 +61,9 @@ CREATE TABLE [dbo].[DmnProduct] ( <br>
     -- ON UPDATE NO ACTION 
 );
 
-**2. Insert data into tables from AdventureWorks2019-db
+2. Insert data into tables from AdventureWorks2019-db
 
-#### [dbo].[FctSales]
+[dbo].[FctSales]
 
 SET IDENTITY_INSERT [dbo].[FctSales] ON
 
@@ -83,7 +83,7 @@ FROM [AdventureWorks2019].[Sales].[SalesOrderDetail]
 
 SET IDENTITY_INSERT [dbo].[FctSales] OFF
 
-#### [dbo].[DmnOrder]
+[dbo].[DmnOrder]
 
 SET IDENTITY_INSERT [dbo].[DmnOrder] OFF
 
@@ -105,7 +105,7 @@ CREATE TABLE [dbo].[DmnOrder](
 
 DROP TABLE [Stamp].[dbo].[DmnOrder]
 
-#### [dbo].[DmnProduct]
+[dbo].[DmnProduct]
 
 SET IDENTITY_INSERT [dbo].[DmnProduct] ON
 
