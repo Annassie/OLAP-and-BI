@@ -1,9 +1,6 @@
 # OLAP-and-BI
 
-```diff
-+ this text is highlighted in green
-- this text is highlighted in red
-```
+<span style="color:blue">some *blue* text</span>
 
 For using SQL on Mac, was used Docker, where SQL Server was installed.
 
