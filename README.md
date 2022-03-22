@@ -1,7 +1,5 @@
 # OLAP-and-BI
 
-<span style="color:blue">some *blue* text</span>
-
 For using SQL on Mac, was used Docker, where SQL Server was installed.
 
 Instructions to install SQL Server on Mac:
@@ -48,3 +46,5 @@ FROM [Production].[WorkOrderRouting]
 
 
 #### Task 2
+
+Create your own BD, includign fact and dimension-tables, using Star-schema.
