@@ -1,5 +1,10 @@
 # OLAP-and-BI
 
+```diff
++ this text is highlighted in green
+- this text is highlighted in red
+```
+
 For using SQL on Mac, was used Docker, where SQL Server was installed.
 
 Instructions to install SQL Server on Mac:
