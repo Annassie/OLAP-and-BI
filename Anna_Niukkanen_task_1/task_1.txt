@@ -1,0 +1,9 @@
+Task 1
+
+The task 2 is about creating Exel table and chart based on info from AdventureWork2019-db.
+
+Fot it was selected the next tables:
+
+SELECT WorkOrderID, LocationID, ProductID, ActualStartDate, actualCost
+FROM [Production].[WorkOrderRouting]
+ORDER BY ActualStartDate, ProductID
